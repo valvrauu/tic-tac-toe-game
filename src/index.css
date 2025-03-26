@@ -29,4 +29,6 @@
   --tracking-wider: 0.0625em;
 
   --radius-*: initial;
+  --radius-sm: 0.625rem;
+  --radius-lg: 0.9375rem;
 }
