@@ -4,6 +4,8 @@ import { createRoot } from "react-dom/client";
 import Home from "./pages/Home";
 import Game from "./pages/Game";
 
+import "./index.css";
+
 const router = createBrowserRouter([
   {
     path: "/",
