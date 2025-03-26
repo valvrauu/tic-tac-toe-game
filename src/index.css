@@ -2,4 +2,14 @@
 
 @theme {
   --color-*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-turquoise: #31c3bd;
+  --color-turquoise-blue: #65e9e4;
+  --color-saffron: #f2b137;
+  --color-golden-tainoi: #ffc860;
+  --color-mirage: #1a2a33;
+  --color-te-papa-green: #1f3641;
+  --color-casper: #a8bfc9;
+  --color-botticelli: #dbe8ed;
 }
