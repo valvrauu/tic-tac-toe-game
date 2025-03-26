@@ -31,4 +31,6 @@
   --radius-*: initial;
   --radius-sm: 0.625rem;
   --radius-lg: 0.9375rem;
+
+  --inset-shadow-*: initial;
 }
