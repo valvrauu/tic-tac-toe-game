@@ -18,4 +18,10 @@
   --font-outfit: "Outfit", sans-serif;
 
   --text-*: initial;
+  --text-sm: 0.75rem;
+  --text-base: 0.875rem;
+  --text-lg: 1rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2.5rem;
 }
