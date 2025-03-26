@@ -26,4 +26,5 @@
   --text-3xl: 2.5rem;
 
   --tracking-*: initial;
+  --tracking-wider: 0.0625em;
 }
