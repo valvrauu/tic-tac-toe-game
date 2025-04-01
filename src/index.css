@@ -34,4 +34,13 @@
 
   --inset-shadow-*: initial;
   --inset-shadow: inset 0 -8px 0 0;
+
+  --breakpoint-*: initial;
+  --breakpoint-mobile-sm: 20rem;
+  --breakpoint-mobile-md: 23.4375rem;
+  --breakpoint-mobile-lg: 26.5625rem;
+  --breakpoint-tablet: 48rem;
+  --breakpoint-laptop: 64rem;
+  --breakpoint-desktop: 90rem;
+  --breakpoint-desktop-lg: 160rem;
 }
