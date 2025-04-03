@@ -7,7 +7,7 @@ function PickPlayer() {
   const [playerMark, setplayerMark] = useState("X");
 
   return (
-    <div className="bg-te-papa-green text-casper inset-shadow inset-shadow-big-stone grid justify-items-center gap-4 rounded-lg px-6 pt-6 pb-7.5">
+    <div className="bg-te-papa-green text-casper inset-shadow-lg inset-shadow-big-stone grid justify-items-center gap-4 rounded-lg px-6 pt-6 pb-7.5">
       <h2 className="mb-2 text-lg leading-[normal] font-bold tracking-wider uppercase">
         Pick Player 1’s Mark
       </h2>

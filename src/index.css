@@ -34,7 +34,8 @@
   --radius-lg: 0.9375rem;
 
   --inset-shadow-*: initial;
-  --inset-shadow: inset 0 -8px 0 0;
+  --inset-shadow-sm: inset 0 -4px 0 0;
+  --inset-shadow-lg: inset 0 -8px 0 0;
 
   --breakpoint-*: initial;
   --breakpoint-mobile-sm: 20rem;
