@@ -11,10 +11,10 @@ function PickPlayer() {
       <h2 className="mb-2 text-lg leading-[normal] font-bold tracking-wider uppercase">
         Pick Player 1’s Mark
       </h2>
-      <div className="bg-mirage mb-[calc(--spacing(0.5)-1px)] grid grid-cols-2 justify-self-stretch rounded-sm px-2 py-[calc(--spacing(2)+1px)]">
+      <div className="bg-mirage mb-[calc(--spacing(0.5)-1px)] grid grid-cols-2 justify-self-stretch rounded-md px-2 py-[calc(--spacing(2)+1px)]">
         <label
           htmlFor="X"
-          className={`${playerMark === "X" ? "bg-casper" : "hover:bg-casper/5"} grid cursor-pointer justify-items-center rounded-sm p-[calc(--spacing(2.5)+1px)] duration-200`}
+          className={`${playerMark === "X" ? "bg-casper" : "hover:bg-casper/5"} grid cursor-pointer justify-items-center rounded-md p-[calc(--spacing(2.5)+1px)] duration-200`}
         >
           <IconX
             className={`${playerMark === "X" ? "fill-mirage" : "fill-casper"} duration-200`}
@@ -31,7 +31,7 @@ function PickPlayer() {
         />
         <label
           htmlFor="O"
-          className={`${playerMark === "O" ? "bg-casper" : "hover:bg-casper/5"} grid cursor-pointer justify-items-center rounded-sm p-[calc(--spacing(2.5)+1px)] duration-200`}
+          className={`${playerMark === "O" ? "bg-casper" : "hover:bg-casper/5"} grid cursor-pointer justify-items-center rounded-md p-[calc(--spacing(2.5)+1px)] duration-200`}
         >
           <IconO
             className={`${playerMark === "O" ? "fill-mirage" : "fill-casper"} duration-200`}
