@@ -4,9 +4,7 @@ import { GameContextProvider } from "../contexts/GameContext";
 function RootLayout() {
   return (
     <GameContextProvider>
-      <main>
-        <Outlet />
-      </main>
+      <Outlet />
     </GameContextProvider>
   );
 }

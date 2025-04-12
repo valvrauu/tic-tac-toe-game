@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 import { createRoot } from "react-dom/client";
 
+import Layout from "./layouts/Layout";
 import RootLayout from "./layouts/RootLayout";
 
 import Home from "./pages/Home";
@@ -15,11 +16,19 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />
+        element: (
+          <Layout position="center">
+            <Home />
+          </Layout>
+        )
       },
       {
-        path: "/game",
-        element: <Game />
+        path: "game",
+        element: (
+          <Layout position="top">
+            <Game />
+          </Layout>
+        )
       }
     ]
   }
