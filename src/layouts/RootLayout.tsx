@@ -7,7 +7,7 @@ function RootLayout() {
 
   return (
     <GameContextProvider>
-      <main className={isMenu ? "grid flex-1 place-content-center" : ""}>
+      <main className={isMenu ? "flex-1 flex-col flex items-center justify-center" : ""}>
         <Outlet />
       </main>
     </GameContextProvider>
