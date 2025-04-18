@@ -1,10 +1,10 @@
 import { createContext } from "react";
 
 type GameContextProps = {
-  playerMark: "X" | "O";
-  mode: "CPU" | "Player";
-  setPlayerMark: (mark: "X" | "O") => void;
-  setMode: (mode: "CPU" | "Player") => void;
+  playerMark: "x" | "o";
+  mode: "cpu" | "player";
+  setPlayerMark: (mark: "x" | "o") => void;
+  setMode: (mode: "cpu" | "player") => void;
 };
 
 export const GameContext = createContext<GameContextProps | null>(null);
