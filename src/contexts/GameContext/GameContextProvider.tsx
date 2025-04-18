@@ -1,9 +1,11 @@
-import { useState, ReactNode } from "react";
+import React from "react";
 import { GameContext } from "./GameContext";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 
-export function GameContextProvider({ children }: { children: ReactNode }) {
-  const [playerMark, setPlayerMark] = useState<"x" | "o">("x");
-  const [mode, setMode] = useState<"cpu" | "player">("cpu");
+// prettier-ignore
+export function GameContextProvider({ children }: { children: React.ReactNode }) {
+  const [playerMark, setPlayerMark] = useLocalStorage<"x" | "o">("playerMark", "x");
+  const [mode, setMode] = useLocalStorage<"cpu" | "player">("mode", "cpu");
 
   return (
     <GameContext.Provider value={{ playerMark, mode, setPlayerMark, setMode }}>
