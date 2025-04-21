@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useGameContext } from "../contexts/GameContext";
 
 import IconX from "../assets/icons/icon-x.svg?react";
 import IconO from "../assets/icons/icon-o.svg?react";
 
 function PickPlayer() {
-  const [playerMark, setplayerMark] = useState("x");
+  const { playerMark, setPlayerMark } = useGameContext();
 
   return (
     <div className="bg-te-papa-green text-casper inset-shadow-lg inset-shadow-big-stone grid justify-items-center gap-4 rounded-lg px-6 pt-6 pb-7.5">
@@ -27,7 +27,7 @@ function PickPlayer() {
           className="sr-only"
           value="x"
           checked={playerMark === "x"}
-          onChange={() => setplayerMark("x")}
+          onChange={() => setPlayerMark("x")}
         />
         <label
           htmlFor="o"
@@ -44,7 +44,7 @@ function PickPlayer() {
           className="sr-only"
           value="o"
           checked={playerMark === "o"}
-          onChange={() => setplayerMark("o")}
+          onChange={() => setPlayerMark("o")}
         />
       </div>
       <span className="leading-[normal] font-medium tracking-wider uppercase">
