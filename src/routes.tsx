@@ -1,15 +1,15 @@
 import { createBrowserRouter } from "react-router";
 import RootLayout from "./layouts/RootLayout";
-import Menu from "./pages/Menu";
-import Game from "./pages/Game";
+import MenuPage from "./pages/MenuPage";
+import GamePage from "./pages/GamePage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
     children: [
-      { index: true, element: <Menu /> },
-      { path: "/game/:mode", element: <Game /> }
+      { index: true, element: <MenuPage /> },
+      { path: "/game/:mode", element: <GamePage /> }
     ]
   }
 ]);
