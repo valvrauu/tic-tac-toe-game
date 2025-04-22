@@ -2,7 +2,7 @@ import Logo from "../components/Logo";
 import PickPlayer from "../components/PickPlayer";
 import { LinkButton } from "../components/Button";
 
-function Menu() {
+function MenuPage() {
   return (
     <div className="tablet:gap-10 grid w-full max-w-115 gap-8">
       <div className="justify-self-center">
@@ -21,4 +21,4 @@ function Menu() {
   );
 }
 
-export default Menu;
+export default MenuPage;
