@@ -1,11 +1,11 @@
 import { Outlet } from "react-router";
-import { GameContextProvider } from "../contexts/GameContext";
+import { GameProvider } from "@/contexts/GameProvider";
 
 function RootLayout() {
   return (
-    <GameContextProvider>
+    <GameProvider>
       <Outlet />
-    </GameContextProvider>
+    </GameProvider>
   );
 }
 
