@@ -9,6 +9,7 @@ import { Modal } from "./Modal";
 import { PickOption } from "./PickOption";
 import { PickPlayer } from "./PickPlayer";
 import { Restart } from "./Restart";
+import { Score } from "./Score";
 import { Turn } from "./Turn";
 
 type GameProps = {
@@ -34,6 +35,7 @@ Game.Modal = Modal;
 Game.PickOption = PickOption;
 Game.PickPlayer = PickPlayer;
 Game.Restart = Restart;
+Game.Score = Score;
 Game.Turn = Turn;
 
 export default Game;
