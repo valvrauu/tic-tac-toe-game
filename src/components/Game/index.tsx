@@ -3,6 +3,7 @@ import cn from "@/utils/cn";
 
 import { Box } from "./Box";
 import { Button, LinkButton, AnchorButton } from "./Button";
+import { Cell } from "./Cell";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { Logo } from "./Logo";
@@ -31,6 +32,7 @@ Game.Box = Box;
 Game.Button = Button;
 Game.LinkButton = LinkButton;
 Game.AnchorButton = AnchorButton;
+Game.Cell = Cell;
 Game.Footer = Footer;
 Game.Header = Header;
 Game.Logo = Logo;
