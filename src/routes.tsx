@@ -3,7 +3,7 @@ import RootLayout from "./layouts/RootLayout";
 import MenuPage from "./pages/MenuPage";
 import GamePage from "./pages/GamePage";
 
-export const router = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
@@ -14,3 +14,5 @@ export const router = createBrowserRouter([
     ]
   }
 ]);
+
+export default router;
