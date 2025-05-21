@@ -5,6 +5,7 @@ import { Button, LinkButton, AnchorButton } from "./Button";
 import { Logo } from "./Logo";
 import { PickOption } from "./PickOption";
 import { PickPlayer } from "./PickPlayer";
+import { Turn } from "./Turn";
 
 type GameProps = {
   className?: string;
@@ -25,5 +26,6 @@ Game.AnchorButton = AnchorButton;
 Game.Logo = Logo;
 Game.PickOption = PickOption;
 Game.PickPlayer = PickPlayer;
+Game.Turn = Turn;
 
 export default Game;
