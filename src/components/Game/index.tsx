@@ -1,6 +1,7 @@
 import React from "react";
 import cn from "@/utils/cn";
 
+import { Logo } from "./Logo";
 import { PickOption } from "./PickOption";
 import { PickPlayer } from "./PickPlayer";
 
@@ -17,6 +18,7 @@ function Game({ className, children }: GameProps) {
   );
 }
 
+Game.Logo = Logo;
 Game.PickOption = PickOption;
 Game.PickPlayer = PickPlayer;
 
