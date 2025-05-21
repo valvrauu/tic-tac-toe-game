@@ -1,6 +1,7 @@
 import React from "react";
 import cn from "@/utils/cn";
 
+import { Board } from "./Board";
 import { Box } from "./Box";
 import { Button, LinkButton, AnchorButton } from "./Button";
 import { Cell } from "./Cell";
@@ -28,6 +29,7 @@ function Game({ className, children }: GameProps) {
   );
 }
 
+Game.Board = Board;
 Game.Box = Box;
 Game.Button = Button;
 Game.LinkButton = LinkButton;
