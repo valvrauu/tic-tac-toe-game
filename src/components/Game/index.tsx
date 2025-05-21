@@ -2,6 +2,7 @@ import React from "react";
 import cn from "@/utils/cn";
 
 import { Button, LinkButton, AnchorButton } from "./Button";
+import { Header } from "./Header";
 import { Logo } from "./Logo";
 import { Modal } from "./Modal";
 import { PickOption } from "./PickOption";
@@ -25,6 +26,7 @@ function Game({ className, children }: GameProps) {
 Game.Button = Button;
 Game.LinkButton = LinkButton;
 Game.AnchorButton = AnchorButton;
+Game.Header = Header;
 Game.Logo = Logo;
 Game.Modal = Modal;
 Game.PickOption = PickOption;
