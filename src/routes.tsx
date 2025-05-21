@@ -9,7 +9,8 @@ export const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <MenuPage /> },
-      { path: "/game/:mode", element: <GamePage /> }
+      { path: "/singleplayer", element: <GamePage mode="singleplayer" /> },
+      { path: "/multiplayer", element: <GamePage mode="multiplayer" /> }
     ]
   }
 ]);
