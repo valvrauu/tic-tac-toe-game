@@ -3,6 +3,7 @@ import cn from "@/utils/cn";
 
 import { Button, LinkButton, AnchorButton } from "./Button";
 import { Logo } from "./Logo";
+import { Modal } from "./Modal";
 import { PickOption } from "./PickOption";
 import { PickPlayer } from "./PickPlayer";
 import { Turn } from "./Turn";
@@ -24,6 +25,7 @@ Game.Button = Button;
 Game.LinkButton = LinkButton;
 Game.AnchorButton = AnchorButton;
 Game.Logo = Logo;
+Game.Modal = Modal;
 Game.PickOption = PickOption;
 Game.PickPlayer = PickPlayer;
 Game.Turn = Turn;
