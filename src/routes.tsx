@@ -1,9 +1,9 @@
-import { createBrowserRouter } from "react-router";
+import { createHashRouter } from "react-router";
 import RootLayout from "@/layouts/RootLayout";
 import MenuPage from "@/pages/MenuPage";
 import GamePage from "@/pages/GamePage";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <RootLayout />,
