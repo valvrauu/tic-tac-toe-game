@@ -9,8 +9,8 @@ type WinnerResult = {
   lineType: "row" | "column" | "diagonal";
 };
 
+// prettier-ignore
 function checkWinner(board: Board): WinnerResult | null {
-  // prettier-ignore
   const winningPatterns: {
     positions: WinningLine;
     type: "row" | "column" | "diagonal";
