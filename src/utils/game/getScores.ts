@@ -7,7 +7,7 @@ type getScoreProps = {
 };
 
 // prettier-ignore
-function getScore({ mode, players, scores }: getScoreProps) {
+function getScores({ mode, players, scores }: getScoreProps) {
   const isSinglePlayer = mode === "singleplayer";
   const isPlayerX = players.player === "x";
 
@@ -47,4 +47,4 @@ function getScore({ mode, players, scores }: getScoreProps) {
   };
 }
 
-export { getScore };
+export { getScores };
