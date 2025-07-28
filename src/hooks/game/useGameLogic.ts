@@ -18,16 +18,13 @@ function useGameLogic() {
     mode === "singleplayer" && players.opponent === turn && isActive;
 
   function handleMakeMove(row: number = -1, column: number = -1) {
-    if (!isActive) return;
-    if (isCpuThinking) {
-      const { rowIndex, columnIndex } = findBestMove(
-        board,
-        players.player,
-        players.opponent
-      );
+    if (!isActive || isCpuThinking) return;
 
-      row = rowIndex;
-      column = columnIndex;
+    const bestMove = findBestMove(board, players.player, players.opponent);
+
+    if (bestMove) {
+      row = bestMove.row;
+      column = bestMove.column;
     }
 
     const updatedBoard = makeMove(board, row, column, turn);
