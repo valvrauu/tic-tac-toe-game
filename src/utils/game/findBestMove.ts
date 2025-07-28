@@ -5,6 +5,9 @@ function findBestMove(board: Board, human: Symbol, cpu: Symbol) {
   let bestScore = -Infinity;
   let bestMove = null;
 
+  const isEmptyBoard = board.every((row) => row.every((col) => col === null));
+  if (isEmptyBoard) return { row: 1, column: 1 };
+
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
       if (board[i][j] === null) {
