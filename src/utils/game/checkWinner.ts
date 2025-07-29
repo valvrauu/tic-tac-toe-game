@@ -53,3 +53,4 @@ function checkWinner(board: Board): WinnerResult | null {
 }
 
 export { checkWinner };
+export type { WinnerResult };
