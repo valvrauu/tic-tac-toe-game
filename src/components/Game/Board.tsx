@@ -11,20 +11,23 @@ type BoardProps = {
 
 function Board({ className }: BoardProps) {
   const { board } = useGameContext();
-  const { isCpuThinking, humanCanPlay, handleMakeMove } = useGameLogic();
-  const { title, subTitle, icon, hasWinner, isDraw } = useGameStatus();
+  const { isCpuThinking, humanCanPlay, makeCpuMove, handleMakeMove } =
+    useGameLogic();
+  const { status, roundOutcomeTitle, roundOutcomeMessage, winnerResult } =
+    useGameStatus();
   const { handleReset } = useGameReset();
 
-  const isModalActive = hasWinner || isDraw;
+  const isModalActive = status === "win" || status === "draw";
+  const icon = status === "win" ? winnerResult.winner : null;
 
   useEffect(() => {
     if (isCpuThinking) {
       const timer = setTimeout(() => {
-        handleMakeMove();
+        makeCpuMove();
       }, 1000);
       return () => clearTimeout(timer);
     }
-  }, [isCpuThinking, handleMakeMove]);
+  }, [isCpuThinking, makeCpuMove]);
 
   return (
     <div className={cn("grid gap-5", className)}>
@@ -41,11 +44,10 @@ function Board({ className }: BoardProps) {
               className={cn(isCpuThinking && "cursor-default")}
               mark={column}
               isHighlighted={
-                hasWinner
-                  ? hasWinner.winningLine.some(
-                      ([r, c]) => r === rowIndex && c === columnIndex
-                    )
-                  : false
+                status === "win" &&
+                winnerResult.winningLine.some(
+                  ([r, c]) => r === rowIndex && c === columnIndex
+                )
               }
               onClick={() =>
                 humanCanPlay && handleMakeMove(rowIndex, columnIndex)
@@ -57,8 +59,8 @@ function Board({ className }: BoardProps) {
       {isModalActive &&
         createPortal(
           <Game.Modal
-            title={title}
-            subTitle={subTitle}
+            title={roundOutcomeTitle}
+            subTitle={roundOutcomeMessage}
             icon={icon}
             onCancel={{
               text: "Quit",
