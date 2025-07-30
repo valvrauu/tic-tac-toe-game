@@ -34,13 +34,13 @@ function useGameLogic() {
   function handleMakeMove(row: number, column: number) {
     if (!isGameActive) return;
 
-    const updatedBoard = makeMove(board, row, column, turn);
-    if (!updatedBoard) return;
+    const move = makeMove(board, row, column, turn);
+    if (move.status === "invalid") return;
 
-    const hasWinner = checkWinner(updatedBoard);
-    const isDraw = !hasWinner && !checkMovesLeft(updatedBoard);
+    const hasWinner = checkWinner(move.board);
+    const isDraw = !hasWinner && !checkMovesLeft(move.board);
 
-    setBoard(updatedBoard);
+    setBoard(move.board);
 
     if (!hasWinner && !isDraw) {
       setTurn(turn === "x" ? "o" : "x");
