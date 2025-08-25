@@ -3,8 +3,10 @@ import { minimax } from "@/utils/game";
 
 function findBestMove(board: Board, human: Symbol, cpu: Symbol) {
   let bestScore = -Infinity;
-  let rowIndex = -1;
-  let columnIndex = -1;
+  let bestMove = null;
+
+  const isEmptyBoard = board.every((row) => row.every((col) => col === null));
+  if (isEmptyBoard) return { row: 1, column: 1 };
 
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
@@ -16,14 +18,13 @@ function findBestMove(board: Board, human: Symbol, cpu: Symbol) {
 
         if (score > bestScore) {
           bestScore = score;
-          rowIndex = i;
-          columnIndex = j;
+          bestMove = { row: i, column: j };
         }
       }
     }
   }
 
-  return { rowIndex, columnIndex };
+  return bestMove;
 }
 
 export { findBestMove };

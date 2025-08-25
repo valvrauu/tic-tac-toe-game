@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Players, Symbol, Mode, Board, Scores } from "@/types";
 import { GameContext } from "@/contexts/GameContext";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
-import { resetBoard } from "@/utils/game/resetBoard";
+import { resetBoard } from "@/utils/game";
 
 type GameProviderProps = {
   children: React.ReactNode;

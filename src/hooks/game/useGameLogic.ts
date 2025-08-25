@@ -10,25 +10,29 @@ import {
 function useGameLogic() {
   const { turn, mode, board, players, setTurn, setBoard, setScores } =
     useGameContext();
-  const { isActive } = useGameStatus();
+  const { status } = useGameStatus();
 
-  const humanCanPlay =
-    mode === "singleplayer" ? players.player === turn && isActive : isActive;
+  const isGameActive = status === "progress";
+  const isSinglePlayer = mode === "singleplayer";
+
+  const humanCanPlay = isSinglePlayer
+    ? players.player === turn && isGameActive
+    : isGameActive;
+
   const isCpuThinking =
-    mode === "singleplayer" && players.opponent === turn && isActive;
+    isSinglePlayer && players.opponent === turn && isGameActive;
 
-  function handleMakeMove(row: number = -1, column: number = -1) {
-    if (!isActive) return;
-    if (isCpuThinking) {
-      const { rowIndex, columnIndex } = findBestMove(
-        board,
-        players.player,
-        players.opponent
-      );
+  function makeCpuMove() {
+    if (!isGameActive) return;
 
-      row = rowIndex;
-      column = columnIndex;
-    }
+    const bestMove = findBestMove(board, players.player, players.opponent);
+    if (!bestMove) return;
+
+    handleMakeMove(bestMove.row, bestMove.column);
+  }
+
+  function handleMakeMove(row: number, column: number) {
+    if (!isGameActive) return;
 
     const updatedBoard = makeMove(board, row, column, turn);
     if (!updatedBoard) return;
@@ -42,7 +46,7 @@ function useGameLogic() {
       setTurn(turn === "x" ? "o" : "x");
     } else {
       setScores((prevScores) => {
-        if (mode === "singleplayer") {
+        if (isSinglePlayer) {
           return {
             ...prevScores,
             singleplayer: {
@@ -71,7 +75,7 @@ function useGameLogic() {
     }
   }
 
-  return { isCpuThinking, humanCanPlay, handleMakeMove };
+  return { isCpuThinking, humanCanPlay, makeCpuMove, handleMakeMove };
 }
 
 export { useGameLogic };

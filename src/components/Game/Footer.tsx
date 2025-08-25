@@ -1,5 +1,5 @@
 import Game from "@/components/Game";
-import { useGameScore } from "@/hooks/game";
+import { useGameScores } from "@/hooks/game";
 import cn from "@/utils/cn";
 
 type FooterProps = {
@@ -7,7 +7,7 @@ type FooterProps = {
 };
 
 function Footer({ className }: FooterProps) {
-  const { labels, score } = useGameScore();
+  const { labels, score } = useGameScores();
 
   return (
     <footer className={cn("grid grid-cols-3 gap-5", className)}>
